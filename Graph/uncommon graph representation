@@ -8,7 +8,7 @@ struct edgeData{
     int nxt,to,cost;
 }edges[maxSize];
 
-// Graph with adjacency list
+// Graph with uncommon representation
 void init() //graph initialization
 {
     memset(head,-1,sizeof(head));
