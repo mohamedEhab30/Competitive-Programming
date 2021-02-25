@@ -86,5 +86,6 @@ vector<int> BFS(int src) //Breadth first search and shortest path from source no
 
 int main()
 {
+    init();
     //Code
 }
