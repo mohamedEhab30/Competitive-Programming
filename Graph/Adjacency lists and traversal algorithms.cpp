@@ -11,7 +11,7 @@ void init() //graph initialization
     for(int i=0;i<maxSize;i++)
         adj[i].clear();
     memset(vis,0,sizeof(vis));
-    vid=0;
+    ++vid;
 }
 
 void addEdge(int from,int to) //add edge in directed graph
