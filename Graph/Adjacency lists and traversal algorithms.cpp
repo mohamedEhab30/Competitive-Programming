@@ -4,6 +4,7 @@ using namespace std;
 const int maxSize = 100009;
 vector<int> adj[maxSize];
 int vis[maxSize],vid=0;
+
 // Graph with adjacency list
 void init() //graph initialization
 {
@@ -12,15 +13,18 @@ void init() //graph initialization
     memset(vis,0,sizeof(vis));
     vid=0;
 }
+
 void addEdge(int from,int to) //add edge in directed graph
 {
     adj[from].push_back(to);
 }
+
 void addBiEdge(int u,int v)     //add edge in undirected graph
 {
     addEdge(u,v);
     addEdge(v,u);
 }
+
 void nodeAdjacents(int node)  //all vertices connected with certain vertix
 {
     cout<<"Node "<<node<<"connected with :";
@@ -30,6 +34,7 @@ void nodeAdjacents(int node)  //all vertices connected with certain vertix
     }
     cout<<endl;
 }
+
 void DFS(int node) //depth first search
 {
     vis[node]=vid;
@@ -40,6 +45,7 @@ void DFS(int node) //depth first search
             DFS(v);
     }
 }
+
 int connectedComponents(int n) //count number of connected components
 {
     int res=0;
@@ -53,6 +59,7 @@ int connectedComponents(int n) //count number of connected components
     }
     return res;
 }
+
 vector<int> BFS(int src) //Breadth first search and shortest path from source node to all other nodes
 {
     queue<pair<int,int>>q;
@@ -76,6 +83,7 @@ vector<int> BFS(int src) //Breadth first search and shortest path from source no
     }
     return distance;
 }
+
 int main()
 {
     //Code
