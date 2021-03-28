@@ -1,5 +1,5 @@
 Important Notes
-----------------------
+---------------
 - A natural number starting from 2: {2, 3, 4, 5, 6, 7, . . .} is considered as a prime if it is only divisible by 1 or itself.
 - number of primes in range [0 - n] can be calculated by n/(ln(n) - 1).
 - Sieve algorithm Complexity is O(N log log N).
