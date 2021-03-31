@@ -1,18 +1,18 @@
 #include <bits/stdc++.h>
 using namespace std;
 typedef long long ll;
-const ll mod=1e9+7;
-vector<int>isp(1000009,1);
+const ll mod=1e9+7,SZ=10000007;
+vector<int>isprime(SZ,1);
 vector<ll>primes;
 void sieve(ll range)
 {
-    isp[0]=isp[1]=0;
+    isprime[0]=isprime[1]=0;
     for(ll i=2;i<=range;i++)
     {
-        if(isp[i])
+        if(isprime[i])
         {
             for(ll j=i*i;j<=range;j+=i)
-                isp[j]=0;
+                isprime[j]=0;
             primes.push_back(i);
         }
 
@@ -37,10 +37,6 @@ vector<ll> primeFactors(ll N)
 }
 int main()
 {
-#ifndef ONLINE_JUDGE
-    freopen("input.txt", "r", stdin);
-    freopen("output.txt", "w", stdout);
-#endif
    sieve(1000007);
    vector<ll> factors = primeFactors(1000000000000);
 }
