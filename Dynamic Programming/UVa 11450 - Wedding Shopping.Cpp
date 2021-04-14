@@ -9,16 +9,14 @@ int main()
     cin>>t;
     while (t--)
     {
-        int m,c;
+        int m,c,k,y;
         cin>>m>>c;
         vector<vector<int>>v(c+5);
         for(int i=1;i<=c;i++)
         {
-            int k;
             cin>>k;
             for(int j=0;j<k;j++)
             {
-                int y;
                 cin>>y;
                 v[i].push_back(y);
             }
@@ -43,7 +41,7 @@ int main()
                 }
             }
         }
-        ll ans=-1;
+        int ans=-1;
         for(int i=0;i<=m;i++)
         {
             if(dp[c][i])
